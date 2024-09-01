@@ -1,4 +1,17 @@
-import SalesChart from "@/components/custom ui/SalesChart";
+import { UserButton } from "@clerk/nextjs";
+
+export default function Home() {
+  return (
+   <div>
+    <UserButton />
+   </div>
+  );
+}
+
+
+
+
+/*import SalesChart from "@/components/custom ui/SalesChart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -62,4 +75,4 @@ export default async function Home() {
       </Card>
     </div>
   );
-}
+}*/
