@@ -37,6 +37,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
+        <ToasterProvider />
           <SignedOut>
             <div className="h-screen flex justify-center items-center">
               <SignIn routing="hash"/>
