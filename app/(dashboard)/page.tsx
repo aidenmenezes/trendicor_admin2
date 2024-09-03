@@ -1,4 +1,4 @@
-import { UserButton } from "@clerk/nextjs";
+/*import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -7,11 +7,11 @@ export default function Home() {
    </div>
   );
 }
+*/
 
 
 
-
-/*import SalesChart from "@/components/custom ui/SalesChart";
+import SalesChart from "@/components/custom ui/SalesChart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -75,4 +75,4 @@ export default async function Home() {
       </Card>
     </div>
   );
-}*/
+}
