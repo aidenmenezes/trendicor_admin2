@@ -20,18 +20,18 @@ export async function POST(req: NextRequest) {
     }
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      payment_method_types: ["card", "link"], // Add UPI as a payment method
       mode: "payment",
       shipping_address_collection: {
-        allowed_countries: ["US", "CA"],
+        allowed_countries: ["IN"], // Only allow India
       },
       shipping_options: [
-        { shipping_rate: "shr_1MfufhDgraNiyvtnDGef2uwK" },
-        { shipping_rate: "shr_1OpHFHDgraNiyvtnOY4vDjuY" },
+        { shipping_rate: "shr_1PvDAaJ1Wm2mJ7xiLDlCRgAR" },
+        //{ shipping_rate: "shr_1OpHFHDgraNiyvtnOY4vDjuY" },
       ],
       line_items: cartItems.map((cartItem: any) => ({
         price_data: {
-          currency: "cad",
+          currency: "inr", // Indian Rupee
           product_data: {
             name: cartItem.item.title,
             metadata: {
