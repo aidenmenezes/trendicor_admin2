@@ -1,4 +1,4 @@
-import { UserButton } from "@clerk/nextjs";
+/*import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -7,11 +7,11 @@ export default function Home() {
    </div>
   );
 }
+*/
 
 
 
-
-/*import SalesChart from "@/components/custom ui/SalesChart";
+import SalesChart from "@/components/custom ui/SalesChart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -19,7 +19,7 @@ import {
   getTotalCustomers,
   getTotalSales,
 } from "@/lib/actions/actions";
-import { CircleDollarSign, ShoppingBag, UserRound } from "lucide-react";
+import {BadgeIndianRupee, ShoppingBag, UserRound } from "lucide-react";
 
 export default async function Home() {
   const totalRevenue = await getTotalSales().then((data) => data.totalRevenue);
@@ -37,10 +37,10 @@ export default async function Home() {
         <Card>
           <CardHeader className="flex flex-row justify-between items-center">
             <CardTitle>Total Revenue</CardTitle>
-            <CircleDollarSign className="max-sm:hidden" />
+            <BadgeIndianRupee  className="max-sm:hidden" />
           </CardHeader>
           <CardContent>
-            <p className="text-body-bold">$ {totalRevenue}</p>
+            <p className="text-body-bold">₹ {totalRevenue}</p>
           </CardContent>
         </Card>
 
@@ -67,7 +67,7 @@ export default async function Home() {
 
       <Card className="mt-10">
         <CardHeader>
-          <CardTitle>Sales Chart ($)</CardTitle>
+          <CardTitle>Sales Chart (₹)</CardTitle>
         </CardHeader>
         <CardContent>
           <SalesChart data={graphData} />
@@ -75,4 +75,4 @@ export default async function Home() {
       </Card>
     </div>
   );
-}*/
+}
